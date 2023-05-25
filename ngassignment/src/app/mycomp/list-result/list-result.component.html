@@ -1,0 +1,33 @@
+<div class="container">
+  <button class="btn btn-danger m-4" style="position: relative;left: 1000px;" (click)="saveOrUpdate('POST')"> Add Details</button>
+  <div class="card">
+   
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Roll No</th>
+          <th scope="col">Student Name</th>
+          <th scope="col">DOB</th>
+          <th scope="col">Score</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr scope="row" *ngFor="let i of this.apiData">
+        <td>{{i.rollno}}</td>
+        <td>{{i.studentName}}</td>
+        <td>{{i.DOB}}</td>
+        <td>{{i.score}}</td>
+        <td>
+          <button class="btn btn-primary m-1" (click)="editPageRedirect()">Edit</button>
+          
+          <button class="btn btn-danger m-1" (click)="deleteRequest(i.rollno)"> Delete</button>
+          <router-outlet> </router-outlet>
+        </td> 
+      </tr>
+       
+      </tbody>
+    </table>
+  </div>
+</div>

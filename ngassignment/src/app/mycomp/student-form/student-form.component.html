@@ -1,0 +1,23 @@
+
+<div class="container">
+    <div class="card" style="width: 70%;">
+        <h4 class="m-2 p-2 "> Add Student Record</h4>
+        <form class="m-3" #studentsForm="ngForm"(ngSubmit)="saveOrUpdate()">
+            <div class="form-group">
+              <label for="rollno">Student Roll No.</label>
+              <input type="text" class="form-control m-2" id="rollno" aria-describedby="rollno" placeholder="Ex:- 001">
+              <label for="rollno">Full Name</label>
+              <input type="text" class="form-control m-2" id="name" aria-describedby="rollno" placeholder="Ex:- Manish Jain">
+              <label for="rollno">DOB</label>
+              <input type="text" class="form-control m-2" id="dob" aria-describedby="rollno" placeholder="Ex:- 12-03-2003">
+              <label for="rollno"> Score</label>
+              <input type="text" class="form-control m-2" id="scr" aria-describedby="rollno" placeholder="Ex:- 001">
+            </div>
+           
+           
+            <button type="submit" class="btn btn-danger m-3"(click)="goBack()">Back</button>
+            <button type="submit" class="btn btn-primary m-3">Add Record</button>
+          </form>
+    </div>
+
+</div>
