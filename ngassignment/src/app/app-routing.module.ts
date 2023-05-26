@@ -6,6 +6,7 @@ import { ListResultComponent } from './mycomp/list-result/list-result.component'
 import { StudentFormComponent } from './mycomp/student-form/student-form.component';
 import { CheckAuthComponent } from './mycomp/check-auth/check-auth.component';
 import { SearchResultComponent } from './mycomp/search-result/search-result.component';
+import { EditformComponent } from './mycomp/editform/editform.component';
 
 
 const routes: Routes = [
@@ -31,7 +32,12 @@ const routes: Routes = [
   {
     path:'auth',
     component:CheckAuthComponent  
+  },
+  {
+    path:'edit/:rollno',
+    component:EditformComponent  
   }
+
 
 ];
 

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,20 +11,21 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit{
   title = 'ngassignment';
+  islogged:boolean =false;
 
+    
   constructor(private router: Router){
     this.router.navigate(['login'], { skipLocationChange: true });
+    
+    if(localStorage.getItem("islogged")!="true")this.islogged=false;
+    else true
 
   }
-  logged:boolean=false;
+  
   ngOnInit(): void {
-    if(localStorage.getItem("islogged")!="true")this.logged=false;
-    else true
+   
   }
-  logout(){
-    localStorage.setItem("islogged","false");
-    this.router.navigate(['login'], { skipLocationChange: true });
-  }
+  
   sendlist(){
   
     this.router.navigate(['login'], { skipLocationChange: true });

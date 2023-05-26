@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from 'src/app/api-service.service';
-import { Router } from '@angular/router';
+import { NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-result',
@@ -19,14 +19,21 @@ export class ListResultComponent implements OnInit {
 
   }
 
-  constructor(private service: ApiServiceService,private router: Router) { }
+  constructor(private service: ApiServiceService,private router: Router) { 
 
-  getDataFromAPI() {
+    // router.events
+    //   .subscribe((event: any) => {
+    //     if (event.navigationTrigger === 'popstate') {
+    //       // Perform actions
+    //       console.log('back was pressed')
+    //     }
+    //   });
 
   }
 
-  editPageRedirect(){
 
+  editPageRedirect(rollno:string){
+    this.router.navigate(['/edit/'+rollno], { skipLocationChange: true })
   }
 
   deleteRequest(rollno:string){

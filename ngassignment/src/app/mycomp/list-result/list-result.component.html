@@ -1,4 +1,5 @@
 <div class="container">
+  <app-logout></app-logout>
   <button class="btn btn-danger m-4" style="position: relative;left: 1000px;" (click)="saveOrUpdate('POST')"> Add Details</button>
   <div class="card">
    
@@ -20,7 +21,7 @@
         <td>{{i.DOB}}</td>
         <td>{{i.score}}</td>
         <td>
-          <button class="btn btn-primary m-1" (click)="editPageRedirect()">Edit</button>
+          <button class="btn btn-primary m-1" (click)="editPageRedirect(i.rollno)">Edit</button>
           
           <button class="btn btn-danger m-1" (click)="deleteRequest(i.rollno)"> Delete</button>
           <router-outlet> </router-outlet>

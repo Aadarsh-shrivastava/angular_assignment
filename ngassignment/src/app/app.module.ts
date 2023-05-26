@@ -10,6 +10,8 @@ import { StudentFormComponent } from './mycomp/student-form/student-form.compone
 import { FormsModule } from '@angular/forms';
 import { CheckAuthComponent } from './mycomp/check-auth/check-auth.component';
 import { SearchResultComponent } from './mycomp/search-result/search-result.component';
+import { EditformComponent } from './mycomp/editform/editform.component';
+import { LogoutComponent } from './mycomp/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SearchResultComponent } from './mycomp/search-result/search-result.comp
     ListResultComponent,
     StudentFormComponent,
     CheckAuthComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    EditformComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

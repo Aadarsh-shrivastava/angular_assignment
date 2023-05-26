@@ -13,6 +13,11 @@ export class ApiServiceService {
     return this.http.get('http://localhost:3000/students');
   }
 
+  updatedata(data:any,rollno:string){
+    console.log('http://localhost:3000/students/'+rollno,'thisd i ghettign updated')
+    return this.http.patch('http://localhost:3000/students/'+rollno,data);
+  }
+
   deleteData(rollno:string){
     const api='http://localhost:3000/students/'+rollno;
     console.log(api)
